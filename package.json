@@ -1,0 +1,19 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A simple todo application built with HTML, CSS, and JavaScript.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "todo",
+    "app",
+    "javascript"
+  ],
+  "author": "Ishan Ojha",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.0"
+  }
+}

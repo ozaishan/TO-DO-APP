@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #c7d2fe 100%);
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background: #fff;
+    max-width: 400px;
+    margin: 60px auto 20px auto;
+    padding: 2rem 2rem 1.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 72, 100, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #a5b4fc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#taskInput:focus {
+    border-color: #6366f1;
+}
+
+#addTaskButton {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#addTaskButton:hover {
+    background: #4f46e5;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    background: #f1f5f9;
+    margin-bottom: 0.7rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(60, 72, 100, 0.05);
+    transition: background 0.2s;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: #a1a1aa;
+    background: #e0e7ff;
+}
+
+.delete-btn {
+    background: #f87171;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 1rem;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 95vw;
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
