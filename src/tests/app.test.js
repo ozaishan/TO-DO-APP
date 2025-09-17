@@ -71,3 +71,39 @@ describe('addTask', () => {
         expect(taskList).toEqual(['Do homework']);
     });
 });
+describe('Tic Tac Toe', () => {
+    let board, currentPlayer, gameActive;
+ beforeEach(() => {
+        board = Array(9).fill('');
+        currentPlayer = '❌';
+        gameActive = true;
+    });
+
+    function checkWinner(board) {
+        const wins = [
+            [0,1,2],[3,4,5],[6,7,8],
+            [0,3,6],[1,4,7],[2,5,8],
+            [0,4,8],[2,4,6]
+        ];
+        return wins.some(line =>
+            board[line[0]] &&
+            board[line[0]] === board[line[1]] &&
+            board[line[1]] === board[line[2]]
+        );
+    }
+
+    test('no winner at start', () => {
+        expect(checkWinner(board)).toBe(false);
+    });
+
+    test('detects a win', () => {
+        board[0] = board[1] = board[2] = '❌';
+        expect(checkWinner(board)).toBe(true);
+    });
+
+    test('detects a draw', () => {
+        board = ['❌','⭕','❌','❌','⭕','❌','⭕','❌','⭕'];
+        expect(checkWinner(board)).toBe(false);
+        expect(board.every(cell => cell)).toBe(true);
+    });
+});

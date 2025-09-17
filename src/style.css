@@ -124,3 +124,76 @@ footer {
         font-size: 1.5rem;
     }
 }
+/* ...existing todo styles... */
+
+/* Tic Tac Toe Styles */
+.tictactoe-container {
+    background: #fff;
+    max-width: 400px;
+    margin: 40px auto 20px auto;
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 72, 100, 0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tictactoe-container h2 {
+    color: #16a34a;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6366f1;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.cell:hover {
+    background: #e0e7ff;
+}
+
+.status {
+    min-height: 24px;
+    margin-bottom: 0.7rem;
+    color: #334155;
+    font-weight: 500;
+    text-align: center;
+}
+
+.reset-btn {
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reset-btn:hover {
+    background: #15803d;
+}
